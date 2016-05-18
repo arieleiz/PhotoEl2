@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F315F725-34D7-4E1D-B81C-3389EE197E5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>photoel2</RootNamespace>
+    <AssemblyName>photoel2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>.\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="MemoryFonts.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="NotebookTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PhotoElForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoElForm.Designer.cs">
+      <DependentUpon>PhotoElForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoElWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workspace.Designer.cs">
+      <DependentUpon>Workspace.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PhotoElForm.resx">
+      <DependentUpon>PhotoElForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Workspace.resx">
+      <DependentUpon>Workspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filters2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filters3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.otf" />
+    <None Include="Resources\font.ttf" />
+    <None Include="Resources\font.woff" />
+    <None Include="Resources\lightsource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_cyangreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_darkred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_greenyellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_yelloworange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlefilter_uv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_aluminium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_calcium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_cobalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_copper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_lead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_lithium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_platinum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sym_zinc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\targetsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodcrate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out41.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
